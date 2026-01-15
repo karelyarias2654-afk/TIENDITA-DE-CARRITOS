@@ -1,504 +1,301 @@
-/* ========================================= */
-/*        ESTILOS GENERALES DE LA PÁGINA      */
-/* ========================================= */
+/* =========================
+   ESTILOS GENERALES
+========================= */
 
-body {
-    background: linear-gradient(135deg, #e3f2fd, #fffde7);
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 80px;
-    transition: background-color 0.5s ease;
+* {
+  box-sizing: border-box;
 }
 
-/* ========================================= */
-/*              TEXTOS GENERALES              */
-/* ========================================= */
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #e3f2fd, #fffde7);
+  transition: background 0.5s ease;
+}
+
+/* =========================
+   TEXTOS
+========================= */
 
 h1 {
-    color: #d32f2f; /* Rojo */
+  color: #d32f2f;
 }
 
 h2 {
-    color: #1976d2; /* Azul */
+  color: #1976d2;
 }
 
 p {
-    color: #424242;
-    font-size: 18px;
+  color: #424242;
+  font-size: 18px;
 }
 
-/* ========================================= */
-/*                 BOTONES                    */
-/* ========================================= */
+/* =========================
+   BOTONES
+========================= */
 
 button {
-    background-color: #fbc02d; /* Amarillo */
-    color: #000;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 10px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fbc02d;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.25s ease;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
-/* ========================================= */
-/*            CONTENEDOR PRINCIPAL            */
-/* ========================================= */
+/* =========================
+   CONTENEDOR
+========================= */
 
 .contenedor {
-    background-color: white;
-    padding: 40px;
-    width: 80%;
-    max-width: 700px;
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-    animation: aparecer 0.8s ease-out;
+  background: white;
+  width: 85%;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  animation: aparecer 0.8s ease;
 }
 
 @keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.contenedor:hover {
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-    transform: translateY(-2px);
-    transition: all 0.4s ease;
-}
-
-/* ========================================= */
-/*           SECCIONES DE PRODUCTOS           */
-/* ========================================= */
+/* =========================
+   SECCIONES
+========================= */
 
 .titulo-seccion {
-    margin-top: 50px;
-    margin-bottom: 25px;
-    font-size: 28px;
-    color: #d32f2f;
-    animation: popTitulo 0.6s ease;
+  margin: 60px 0 25px;
+  font-size: 30px;
+  color: #d32f2f;
 }
 
-@keyframes popTitulo {
-    0% {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+/* =========================
+   MENSAJE EMOCIONAL
+========================= */
+
+.mensaje-emocional {
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* ========================================= */
-/*             GALERÍA DE PRODUCTOS           */
-/* ========================================= */
+.mensaje-emocional h3 {
+  margin-bottom: 10px;
+}
+
+.mensaje-emocional.chicos {
+  background: linear-gradient(135deg, #d4fcd4, #9cff9c);
+}
+
+.mensaje-emocional.medianos {
+  background: linear-gradient(135deg, #fff4c2, #ffd966);
+}
+
+.mensaje-emocional.grandes {
+  background: linear-gradient(135deg, #d6e6ff, #8bb6ff);
+}
+
+/* =========================
+   GALERIA
+========================= */
 
 .galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
 }
 
-/* ========================================= */
-/*               TARJETA PRODUCTO             */
-/* ========================================= */
+/* =========================
+   TARJETAS
+========================= */
 
 .card {
-    background: white;
-    padding: 16px;
-    border-radius: 22px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-
-    /* Animación entrada */
-    opacity: 0;
-    transform: translateY(40px);
-    animation: entradaCard 0.8s ease forwards;
-
-    /* Hover premium */
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: white;
+  padding: 18px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.3);
 }
 
-/* Delay automático */
-.card:nth-child(1) { animation-delay: 0.2s; }
-.card:nth-child(2) { animation-delay: 0.4s; }
-.card:nth-child(3) { animation-delay: 0.6s; }
-.card:nth-child(4) { animation-delay: 0.8s; }
-
-@keyframes entradaCard {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ========================================= */
-/*        EFECTO LUZ PREMIUM EN TARJETA       */
-/* ========================================= */
-
+/* Efecto brillo */
 .card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 235, 59, 0.5),
-        transparent
-    );
-    transition: 0.6s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 235, 59, 0.5),
+    transparent
+  );
+  transition: 0.6s;
 }
 
 .card:hover::before {
-    left: 120%;
+  left: 120%;
 }
 
-/* ========================================= */
-/*             IMÁGENES PRODUCTO              */
-/* ========================================= */
+/* =========================
+   IMAGEN
+========================= */
 
 .card img {
-    width: 100%;
-    max-height: 220px;
-    object-fit: contain;
-    border-radius: 15px;
-    background-color: #fff;
-    padding: 10px;
-    transition: transform 0.4s ease;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 15px;
+  padding: 10px;
+  transition: transform 0.4s ease;
 }
 
 .card:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-/* ========================================= */
-/*          NOMBRE Y PRECIO PRODUCTO          */
-/* ========================================= */
+/* =========================
+   TEXTO PRODUCTO
+========================= */
 
 .nombre {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #1976d2;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1976d2;
+  margin-top: 10px;
 }
 
 .precio {
-    margin: 5px 0;
-    font-size: 17px;
-    color: #388e3c;
-    font-weight: bold;
+  font-size: 17px;
+  font-weight: bold;
+  color: #388e3c;
 }
 
-/* ========================================= */
-/*             BOTÓN WHATSAPP                 */
-/* ========================================= */
+/* =========================
+   BOTON WHATSAPP
+========================= */
 
 .btn-whatsapp {
-    margin-top: 10px;
-    background-color: #25D366;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.3s ease;
-    animation: latido 2.5s infinite;
+  margin-top: 12px;
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  animation: latido 2.2s infinite;
+  transition: transform 0.3s ease;
 }
 
 .btn-whatsapp:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 @keyframes latido {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.08); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
-/* ========================================= */
-/*              RESPONSIVE CELULAR            */
-/* ========================================= */
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
 
-@media (max-width: 600px) {
-
-    body {
-        margin-top: 40px;
-    }
-
-    .contenedor {
-        width: 92%;
-        padding: 25px;
-    }
-
-    .galeria {
-        grid-template-columns: 1fr;
-    }
-
-    .card img {
-        max-height: 280px;
-    }
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: latido 2s infinite;
+  z-index: 999;
 }
 
-/* ========================================= */
-/*              MODO OSCURO REAL 🌙           */
-/* ========================================= */
+/* =========================
+   MODO OSCURO 🌙
+========================= */
 
 .dark {
-    background: linear-gradient(135deg, #121212, #1e1e1e);
+  background: linear-gradient(135deg, #121212, #1e1e1e);
 }
 
 .dark .contenedor {
-    background-color: #1f1f1f;
-    box-shadow: 0 12px 35px rgba(255,255,255,0.08);
+  background-color: #1f1f1f;
 }
 
 .dark h1 {
-    color: #f44336; /* rojo */
+  color: #f44336;
 }
 
-.dark h2 {
-    color: #64b5f6; /* azul */
-}
-
+.dark h2,
 .dark p,
 .dark .nombre {
-    color: #f5f5f5;
+  color: #f5f5f5;
 }
 
 .dark .precio {
-    color: #81c784;
+  color: #81c784;
 }
 
-.dark button {
-    background-color: #fbc02d;
-    color: black;
-}
-
-/* ========================================= */
-/*           COLOR MÁGICO REAL 🎨             */
-/* ========================================= */
+/* =========================
+   COLOR MAGICO 🎨
+========================= */
 
 .color-magico {
-    background: linear-gradient(
-        135deg,
-        #ff5252,
-        #448aff,
-        #ffeb3b
-    ) !important;
+  background: linear-gradient(
+    135deg,
+    #ff5252,
+    #448aff,
+    #ffeb3b
+  ) !important;
 }
 
-/* =============================== */
-/*        SECCIÓN EMOCIONAL ❤️     */
-/* =============================== */
+/* =========================
+   ANIMACION SCROLL
+========================= */
 
-.mensaje-emocional {
-    margin-top: 60px;
-    padding: 30px;
-    background: linear-gradient(135deg, #fff3e0, #e3f2fd);
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.mensaje-emocional h2 {
-    color: #d32f2f; /* rojo amor */
-    font-size: 26px;
-    margin-bottom: 15px;
-}
-
-.mensaje-emocional p {
-    font-size: 18px;
-    color: #424242;
-    line-height: 1.6;
-}
-
-.mensaje-emocional .firma {
-    margin-top: 15px;
-    font-weight: bold;
-    color: #f9a825; /* amarillo cálido */
-}
-
-/* =============================== */
-/*    WHATSAPP FLOTANTE 📲✨       */
-/* =============================== */
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25D366;
-    color: white;
-    font-size: 28px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    animation: latido 2s infinite;
-    z-index: 999;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.15);
-}
-
-/* =============================== */
-/* MICRO INTERACCIONES GLOBALES ✨ */
-/* =============================== */
-
-button, .card, .btn-whatsapp {
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-button:active,
-.card:active,
-.btn-whatsapp:active {
-    transform: scale(0.97);
-}
-
-/* =============================== */
-/* MENSAJES EMOCIONALES            */
-/* =============================== */
-.mensaje-emocional {
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    animation: aparecer 1.2s ease;
-}
-
-.mensaje-emocional h2 {
-    margin-bottom: 10px;
-}
-
-.mensaje-emocional p {
-    font-size: 1.05em;
-}
-
-/* =============================== */
-/* CHICOS                          */
-/* =============================== */
-.mensaje-emocional.chicos {
-    background: linear-gradient(135deg, #d4fcd4, #9cff9c);
-    color: #145214;
-}
-
-/* =============================== */
-/* MEDIANOS                        */
-/* =============================== */
-.mensaje-emocional.medianos {
-    background: linear-gradient(135deg, #fff4c2, #ffd966);
-    color: #7a5a00;
-}
-
-/* =============================== */
-/* GRANDES                         */
-/* =============================== */
-.mensaje-emocional.grandes {
-    background: linear-gradient(135deg, #d6e6ff, #8bb6ff);
-    color: #0b2c5d;
-}
-
-/* =============================== */
-/* ANIMACIÓN                       */
-/* =============================== */
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =============================== */
-/* ANIMACIONES AL PASAR SECCIÓN ✨ */
-/* =============================== */
-
-.scroll {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.9s ease;
-}
-
-.scroll.activo {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* =============================== */
-/* ANIMACIÓN DE CARRITOS UNO A UNO */
-/* =============================== */
-
-.card {
-  opacity: 0;
-  transform: translateY(40px) scale(0.95);
-  transition: 
-    opacity 0.6s ease,
-    transform 0.6s ease;
-}
-
-.card.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* =============================== */
-/* ANIMACIÓN SCROLL CORREGIDA      */
-/* =============================== */
-
-.scroll {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s ease;
-}
-
-.scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Para que NUNCA desaparezcan cosas */
-button, a, h1, h2, h3, p {
-  opacity: 1;
-}
-
-/* ESTADO INICIAL */
 .scroll {
   opacity: 0;
   transform: translateY(40px);
@@ -510,80 +307,21 @@ button, a, h1, h2, h3, p {
   transform: translateY(0);
 }
 
-/* ===== CHICOS ===== */
-.anim-chicos.show {
-  animation: chicosIn 0.8s ease forwards;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
-@keyframes chicosIn {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
+@media (max-width: 600px) {
+  .contenedor {
+    width: 95%;
+    padding: 25px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* ===== MEDIANOS ===== */
-.anim-medianos.show {
-  animation: medianosIn 0.8s ease forwards;
-}
-
-@keyframes medianosIn {
-  from {
-    opacity: 0;
-    transform: translateX(-60px);
+  .galeria {
+    grid-template-columns: 1fr;
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+
+  body {
+    padding-top: 40px;
   }
 }
-
-/* ===== GRANDES ===== */
-.anim-grandes.show {
-  animation: grandesIn 0.9s ease forwards;
-}
-
-@keyframes grandesIn {
-  from {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* ===== MENSAJES ===== */
-.anim-mensaje.show {
-  animation: mensajeIn 1s ease forwards;
-}
-
-@keyframes mensajeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== CARRITOS UNO POR UNO ===== */
-.anim-card {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.anim-card.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.6s ease;
-}
-
-
