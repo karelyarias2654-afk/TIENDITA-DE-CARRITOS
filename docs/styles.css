@@ -230,3 +230,99 @@ body.dark .precio {
 .color-magico {
   filter: hue-rotate(80deg);
 }
+
+/* =============================== */
+/* ANIMACION TITULO PRINCIPAL */
+/* =============================== */
+h1 {
+  animation: tituloEntrada 1.2s ease forwards;
+}
+
+@keyframes tituloEntrada {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+  }
+}
+
+/* =============================== */
+/* TITULOS DE SECCION ANIMADOS */
+/* =============================== */
+.titulo-seccion {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  animation: aparecerTitulo 1s ease forwards;
+}
+
+@keyframes aparecerTitulo {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================== */
+/* LINEA ANIMADA DEBAJO */
+/* =============================== */
+.titulo-seccion::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 4px;
+  border-radius: 10px;
+  animation: lineaTitulo 1.2s ease forwards;
+}
+
+@keyframes lineaTitulo {
+  to {
+    width: 100%;
+  }
+}
+
+/* =============================== */
+/* COLORES OFICIALES */
+/* =============================== */
+
+/* 🔴 CHICOS */
+.anim-chicos .titulo-seccion {
+  color: #d62828;
+  text-shadow: 0 0 12px rgba(214, 40, 40, 0.4);
+}
+
+.anim-chicos .titulo-seccion::after {
+  background: linear-gradient(90deg, #ff4d4d, #b11212);
+}
+
+/* 🟡 MEDIANOS */
+.anim-medianos .titulo-seccion {
+  color: #f1c40f;
+  text-shadow: 0 0 12px rgba(241, 196, 15, 0.5);
+}
+
+.anim-medianos .titulo-seccion::after {
+  background: linear-gradient(90deg, #ffe066, #d4ac0d);
+}
+
+/* 🔵 GRANDES */
+.anim-grandes .titulo-seccion {
+  color: #1f6fff;
+  text-shadow: 0 0 12px rgba(31, 111, 255, 0.5);
+}
+
+.anim-grandes .titulo-seccion::after {
+  background: linear-gradient(90deg, #4da3ff, #0b4fa3);
+}
