@@ -587,52 +587,55 @@ button, a, h1, h2, h3, p {
 }
 
 /* =============================== */
-/* HERO SECTION PREMIUM 🚗✨ */
+/* HERO SIN FONDO – LUJO TOTAL ✨ */
 /* =============================== */
 
 .hero {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
-  padding: 70px 30px;
-  border-radius: 25px;
-  margin-bottom: 60px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+  padding: 60px 20px;
+  margin-bottom: 50px;
 }
 
-/* ===== TITULO DORADO PREMIUM ===== */
+/* ===== TITULO DORADO REAL ===== */
 
 .titulo-principal {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 900;
+  letter-spacing: 3px;
   margin-bottom: 20px;
-  color: #f9c74f;
-  letter-spacing: 2px;
-  position: relative;
+  text-align: center;
 
-  /* brillo dorado */
+  /* DORADO REAL (no amarillo) */
   background: linear-gradient(
     90deg,
-    #fbc02d,
-    #fff8e1,
-    #fbc02d
+    #b8860b,
+    #ffd700,
+    #fff8dc,
+    #ffd700,
+    #b8860b
   );
+  background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: brilloTitulo 3s infinite linear;
+  animation: doradoBrillo 4s infinite linear;
+
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.6),
+    0 0 15px rgba(255, 215, 0, 0.4);
 }
 
-@keyframes brilloTitulo {
+@keyframes doradoBrillo {
   0% { background-position: 0%; }
-  100% { background-position: 200%; }
+  100% { background-position: 300%; }
 }
 
-/* ===== FRASE ROJA ===== */
+/* ===== FRASE FIJA ROJA ===== */
 
 .frase-fija {
   font-size: 1.3rem;
-  color: #e53935;
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #c62828;
+  margin-bottom: 8px;
 }
 
 /* ===== FRASE ROTATIVA DORADA ===== */
@@ -640,9 +643,21 @@ button, a, h1, h2, h3, p {
 .frase-rotativa {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #ffd54f;
+
+  background: linear-gradient(
+    90deg,
+    #b8860b,
+    #ffd700,
+    #fff8dc,
+    #ffd700,
+    #b8860b
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: doradoBrillo 3s infinite linear;
   margin-bottom: 30px;
-  transition: opacity 0.4s ease;
 }
 
 /* ===== BOTONES ===== */
@@ -657,11 +672,4 @@ button, a, h1, h2, h3, p {
   cursor: pointer;
   margin: 10px;
   font-weight: bold;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
-
-.botones-hero button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
-}
-
