@@ -722,12 +722,6 @@ button, a, h1, h2, h3, p {
   margin-bottom: 10px;
 }
 
-/* SEGUNDA FRASE – AZUL */
-.anim-chicos .mensaje-emocional p:first-of-type {
-  color: #1565c0;
-  font-size: 18px;
-}
-
 /* TERCERA FRASE – MÁS GRANDE */
 .anim-chicos .mensaje-emocional p:last-of-type {
   font-size: 20px;
@@ -783,8 +777,7 @@ button, a, h1, h2, h3, p {
 }
 
 /* 🌸 FONDO ROSA SOLO EN SEGUNDA Y TERCERA FRASE */
-.anim-chicos .mensaje-emocional p:nth-of-type(1),
-.anim-chicos .mensaje-emocional p:nth-of-type(2) {
+.anim-chicos .mensaje-emocional p {
   background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
   padding: 12px 18px;
   border-radius: 15px;
@@ -793,19 +786,21 @@ button, a, h1, h2, h3, p {
 }
 
 /* SEGUNDA FRASE – AZUL */
-.anim-chicos .mensaje-emocional p:first-of-type {
+.anim-chicos .mensaje-emocional p:nth-of-type(1) {
   color: #1565c0;
   font-size: 18px;
 }
 
 /* TERCERA FRASE – MÁS GRANDE */
-.anim-chicos .mensaje-emocional p:last-of-type {
+.anim-chicos .mensaje-emocional p:nth-of-type(2) {
   font-size: 21px;
   font-weight: bold;
 }
 
-/* ❌ QUITAR FONDO VERDE SOLO EN CHICOS */
-.anim-chicos .mensaje-emocional.chicos {
+/* 💥 ANULAR COMPLETAMENTE EL VERDE EN CHICOS */
+.anim-chicos .mensaje-emocional {
   background: none !important;
 }
+
+
 
