@@ -802,5 +802,30 @@ button, a, h1, h2, h3, p {
   background: none !important;
 }
 
+/* CONTENEDOR ROSA PARA 2DA Y 3RA FRASE */
+.anim-chicos .frases-rosa {
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+  padding: 16px 20px;
+  border-radius: 18px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* SEGUNDA Y TERCERA FRASE – MISMO ESTILO */
+.anim-chicos .frases-rosa p {
+  background: none;
+  margin: 8px 0;
+  color: #1565c0; /* azul */
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* PRIMERA FRASE – ROJO */
+.anim-chicos .mensaje-emocional h3 {
+  color: #c62828;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
 
 
