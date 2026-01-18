@@ -767,3 +767,72 @@ button, a, h1, h2, h3, p {
   font-size: 20px;
   font-weight: bold;
 }
+
+/* =============================== */
+/*   CHICOS – DISEÑO FINO ❤️✨     */
+/* =============================== */
+
+/* SECCIÓN GENERAL */
+.anim-chicos {
+  padding: 50px 25px;
+  margin-top: 60px;
+}
+
+/* TÍTULO SIN FONDO */
+.anim-chicos .titulo-seccion {
+  color: #d4af37; /* dorado */
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* EFECTO HOVER DEL TÍTULO */
+.anim-chicos .titulo-seccion:hover {
+  transform: scale(1.08);
+  text-shadow: 
+    0 0 8px #d4af37,
+    0 0 18px rgba(212,175,55,0.8);
+}
+
+/* CÍRCULO ROJO (EMOJI) */
+.anim-chicos .titulo-seccion::before {
+  content: "🔴 ";
+}
+
+/* CONTENEDOR MENSAJE */
+.anim-chicos .mensaje-emocional {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* PRIMERA FRASE – ROJO */
+.anim-chicos .mensaje-emocional h3 {
+  color: #c62828;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+/* SEGUNDA Y TERCERA FRASE – FONDO ROSA */
+.anim-chicos .mensaje-emocional p {
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+  padding: 12px 18px;
+  border-radius: 15px;
+  margin: 10px auto;
+  max-width: 520px;
+}
+
+/* SEGUNDA FRASE – AZUL */
+.anim-chicos .mensaje-emocional p:first-of-type {
+  color: #1565c0;
+  font-size: 18px;
+}
+
+/* TERCERA FRASE – MÁS GRANDE */
+.anim-chicos .mensaje-emocional p:last-of-type {
+  font-size: 21px;
+  font-weight: bold;
+}
