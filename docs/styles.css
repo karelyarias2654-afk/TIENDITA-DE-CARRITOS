@@ -722,3 +722,48 @@ button, a, h1, h2, h3, p {
 .botones-hero button:active {
   transform: scale(0.96);
 }
+
+/* =============================== */
+/*   SECCIÓN CHICOS – NIVEL WOW 💖 */
+/* =============================== */
+
+.anim-chicos {
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+  border-radius: 25px;
+  padding: 50px 25px;
+  margin-top: 60px;
+}
+
+/* TÍTULO DORADO */
+.anim-chicos .titulo-seccion {
+  color: #d4af37; /* dorado */
+  font-size: 34px;
+  font-weight: 900;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+/* CONTENEDOR MENSAJE */
+.anim-chicos .mensaje-emocional {
+  background: rgba(255,255,255,0.75);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+/* PRIMERA FRASE – ROJO */
+.anim-chicos .mensaje-emocional h3 {
+  color: #c62828;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* SEGUNDA FRASE – AZUL */
+.anim-chicos .mensaje-emocional p:first-of-type {
+  color: #1565c0;
+  font-size: 18px;
+}
+
+/* TERCERA FRASE – MÁS GRANDE */
+.anim-chicos .mensaje-emocional p:last-of-type {
+  font-size: 20px;
+  font-weight: bold;
+}
