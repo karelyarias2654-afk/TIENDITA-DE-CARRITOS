@@ -9,6 +9,8 @@
   --azul: #1d3557;
 }
 
+/* A partir de aquí va todo el CSS */
+
 /* ===============================
    VARIABLES DE COLOR
 ================================ */
@@ -283,4 +285,5 @@ body.dark .precio {
   50% { background: var(--amarillo); }
   100% { background: var(--azul); }
 }
+
 
