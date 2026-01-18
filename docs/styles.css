@@ -1,3 +1,14 @@
+/* =============================== */
+/* COLORES OFICIALES DE LA TIENDITA */
+/* ROJO - AMARILLO - AZUL          */
+/* =============================== */
+
+:root {
+  --rojo: #e63946;
+  --amarillo: #fcbf49;
+  --azul: #1d3557;
+}
+
 /* ===============================
    VARIABLES DE COLOR
 ================================ */
@@ -272,3 +283,4 @@ body.dark .precio {
   50% { background: var(--amarillo); }
   100% { background: var(--azul); }
 }
+
