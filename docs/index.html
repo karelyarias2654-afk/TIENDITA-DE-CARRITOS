@@ -10,160 +10,135 @@
 <body>
 
 <!-- AUDIO -->
-<audio id="audioMotor" preload="auto">
+<audio id="audioMotor">
   <source src="motor.mp3" type="audio/mpeg">
 </audio>
 
-<!-- ================= HERO ================= -->
-<section class="hero scroll">
+<div class="contenedor">
 
-  <h1 class="titulo-principal">
-    <span class="rojo">Mi</span>
-    <span class="amarillo">Tiendita</span>
-    <span class="azul">de Carritos</span> 🚗✨
-  </h1>
+  <!-- ENCABEZADO -->
+  <header class="scroll encabezado">
+    <h1>Mi Tiendita de Carritos 🚗✨</h1>
+    <h2>Diversión, colección y calidad</h2>
+    <p>Carritos ideales para niños y coleccionistas</p>
+    <p id="mensaje">Pregunta por nuestros modelos disponibles 🚗</p>
 
-  <h2 class="texto-destacado">
-    <span class="azul">Diversión</span>,
-    <span class="rojo">colección</span> y
-    <span class="amarillo">calidad</span>
-  </h2>
+    <div class="botones">
+      <button onclick="saludar()">Cambiar mensaje</button>
+      <button onclick="modoOscuro()">Modo oscuro 🌙</button>
+    </div>
+  </header>
 
-  <p class="descripcion">
-    Carritos ideales para niños y coleccionistas
-  </p>
+  <!-- CHICOS -->
+  <section class="seccion scroll">
+    <h2 class="titulo-seccion">Carritos Chicos – $250</h2>
 
-  <p id="mensaje" class="descripcion">
-    Pregunta por nuestros modelos disponibles 🚗
-  </p>
+    <div class="mensaje-emocional">
+      <h3>Pequeños pero llenos de magia</h3>
+      <p>Ideales para manos pequeñas y grandes aventuras 🚗</p>
+    </div>
 
-  <div class="botones">
-    <button class="btn rojo" onclick="saludar()">Cambiar mensaje</button>
-    <button class="btn azul" onclick="modoOscuro()">Modo oscuro 🌙</button>
-    <button class="btn amarillo" onclick="cambiarColor()">Color mágico 🎨</button>
-  </div>
+    <div class="galeria">
+      <div class="card anim-card scroll">
+        <img src="carrito1.jpeg" alt="Mazda">
+        <h3>Mazda</h3>
+        <p>$250</p>
+      </div>
 
-</section>
+      <div class="card anim-card scroll">
+        <img src="carrito2.jpeg" alt="Nissan Skyline">
+        <h3>Nissan Skyline</h3>
+        <p>$250</p>
+      </div>
 
-<!-- ================= CHICOS ================= -->
-<section class="seccion scroll">
+      <div class="card anim-card scroll">
+        <img src="carrito3.jpeg" alt="Mitsubishi">
+        <h3>Mitsubishi</h3>
+        <p>$250</p>
+      </div>
 
-  <h2 class="titulo-seccion">
-    <span class="rojo">Carritos</span>
-    <span class="azul">Chicos</span> –
-    <span class="amarillo">$250</span>
-  </h2>
+      <div class="card anim-card scroll">
+        <img src="carrito4.jpeg" alt="Toyota Supra">
+        <h3>Toyota Supra</h3>
+        <p>$250</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="card">
-    <p>
-      <span class="rojo">Pequeños</span> pero
-      <span class="amarillo">llenos</span> de
-      <span class="azul">magia</span> 💛
-    </p>
-    <p>Ideales para manos pequeñas y grandes aventuras 🚗✨</p>
-  </div>
+  <!-- MEDIANOS -->
+  <section class="seccion scroll">
+    <h2 class="titulo-seccion">Carritos Medianos – $550</h2>
 
-  <div class="galeria">
-    <article class="card anim-card">
-      <img src="carrito1.jpeg" alt="Mazda chico">
-      <h3 class="rojo">Mazda</h3>
-      <p class="precio">$250</p>
-      <a class="btn rojo" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
+    <div class="mensaje-emocional">
+      <h3>El equilibrio perfecto</h3>
+      <p>Ni muy chicos ni muy grandes 🏁</p>
+    </div>
 
-    <article class="card anim-card">
-      <img src="carrito2.jpeg" alt="Nissan Skyline chico">
-      <h3 class="azul">Nissan Skyline</h3>
-      <p class="precio">$250</p>
-      <a class="btn azul" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
+    <div class="galeria">
+      <div class="card anim-card scroll">
+        <img src="mediano1.jpeg" alt="Camioneta Ford">
+        <h3>Camioneta Ford</h3>
+        <p>$550</p>
+      </div>
 
-    <article class="card anim-card">
-      <img src="carrito3.jpeg" alt="Mitsubishi chico">
-      <h3 class="amarillo">Mitsubishi</h3>
-      <p class="precio">$250</p>
-      <a class="btn amarillo" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
+      <div class="card anim-card scroll">
+        <img src="mediano2.jpeg" alt="Pick Up">
+        <h3>Pick Up</h3>
+        <p>$550</p>
+      </div>
 
-    <article class="card anim-card">
-      <img src="carrito4.jpeg" alt="Toyota Supra chico">
-      <h3 class="rojo">Toyota Supra</h3>
-      <p class="precio">$250</p>
-      <a class="btn rojo" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
-  </div>
+      <div class="card anim-card scroll">
+        <img src="mediano3.jpeg" alt="Honda">
+        <h3>Honda</h3>
+        <p>$550</p>
+      </div>
 
-</section>
+      <div class="card anim-card scroll">
+        <img src="mediano4.jpeg" alt="Corvette">
+        <h3>Corvette</h3>
+        <p>$550</p>
+      </div>
+    </div>
+  </section>
 
-<!-- ================= MEDIANOS ================= -->
-<section class="seccion scroll">
+  <!-- GRANDES -->
+  <section class="seccion scroll">
+    <h2 class="titulo-seccion">Carritos Grandes – $650</h2>
 
-  <h2 class="titulo-seccion">
-    <span class="amarillo">Carritos</span>
-    <span class="rojo">Medianos</span> –
-    <span class="azul">$550</span>
-  </h2>
+    <div class="mensaje-emocional">
+      <h3>Para verdaderos amantes</h3>
+      <p>Más grandes, más presencia 🚘</p>
+    </div>
 
-  <div class="galeria">
-    <article class="card anim-card">
-      <img src="mediano1.jpeg" alt="Camioneta Ford">
-      <h3 class="azul">Camioneta Ford</h3>
-      <p class="precio">$550</p>
-      <a class="btn azul" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
+    <div class="galeria">
+      <div class="card anim-card scroll">
+        <img src="grande1.jpeg" alt="Impala">
+        <h3>Impala</h3>
+        <p>$650</p>
+      </div>
 
-    <article class="card anim-card">
-      <img src="mediano2.jpeg" alt="Pick Up">
-      <h3 class="rojo">Pick Up</h3>
-      <p class="precio">$550</p>
-      <a class="btn rojo" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
+      <div class="card anim-card scroll">
+        <img src="grande2.jpeg" alt="Nissan Ben Sopra">
+        <h3>Nissan Ben Sopra</h3>
+        <p>$650</p>
+      </div>
 
-    <article class="card anim-card">
-      <img src="mediano3.jpeg" alt="Honda">
-      <h3 class="amarillo">Honda</h3>
-      <p class="precio">$550</p>
-      <a class="btn amarillo" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
-  </div>
+      <div class="card anim-card scroll">
+        <img src="grande3.jpeg" alt="Mazda RX7">
+        <h3>Mazda RX7</h3>
+        <p>$650</p>
+      </div>
 
-</section>
+      <div class="card anim-card scroll">
+        <img src="grande4.jpeg" alt="Chevy Camaro">
+        <h3>Chevy Camaro</h3>
+        <p>$650</p>
+      </div>
+    </div>
+  </section>
 
-<!-- ================= GRANDES ================= -->
-<section class="seccion scroll">
+</div>
 
-  <h2 class="titulo-seccion">
-    <span class="azul">Carritos</span>
-    <span class="amarillo">Grandes</span> –
-    <span class="rojo">$650</span>
-  </h2>
-
-  <div class="galeria">
-    <article class="card anim-card">
-      <img src="grande1.jpeg" alt="Impala">
-      <h3 class="rojo">Impala</h3>
-      <p class="precio">$650</p>
-      <a class="btn rojo" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
-
-    <article class="card anim-card">
-      <img src="grande2.jpeg" alt="Mazda RX7">
-      <h3 class="azul">Mazda RX7</h3>
-      <p class="precio">$650</p>
-      <a class="btn azul" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
-
-    <article class="card anim-card">
-      <img src="grande3.jpeg" alt="Chevy Camaro">
-      <h3 class="amarillo">Chevy Camaro</h3>
-      <p class="precio">$650</p>
-      <a class="btn amarillo" href="https://wa.me/523333066661" target="_blank">Pedir por WhatsApp</a>
-    </article>
-  </div>
-
-</section>
-
-<!-- WHATSAPP FLOTANTE -->
 <a href="https://wa.me/523333066661" class="whatsapp-float" target="_blank">📲</a>
 
 <script src="script.js"></script>
