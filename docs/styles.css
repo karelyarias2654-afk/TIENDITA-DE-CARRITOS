@@ -1,130 +1,90 @@
-/* ===============================
-   VARIABLES DE COLOR
-================================ */
-:root {
-  --rojo: #e63946;
-  --amarillo: #fcbf49;
-  --azul: #1d3557;
-}
-
-/* ===============================
-   RESET BÁSICO
-================================ */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
-  color: #111;
+  background: #f2f2f2;
+  color: #222;
 }
 
-/* ===============================
-   HERO
-================================ */
-.hero {
-  background: linear-gradient(135deg, var(--rojo), var(--amarillo), var(--azul));
-  padding: 70px 20px;
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.encabezado {
   text-align: center;
-  border-radius: 0 0 45px 45px;
+  margin-bottom: 50px;
 }
 
-.titulo {
-  font-size: 3rem;
+.encabezado h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-/* ===============================
-   TEXTO TRICOLOR
-================================ */
-.rojo { color: var(--rojo); }
-.amarillo { color: var(--amarillo); }
-.azul { color: var(--azul); }
-
-.subtitulo {
+.encabezado h2 {
   font-size: 1.5rem;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.descripcion {
-  margin: 15px 0 30px;
-  font-size: 1.1rem;
-  color: white;
-}
-
-/* ===============================
-   BOTONES
-================================ */
-.grupo-botones {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 12px 22px;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
+.botones button {
+  padding: 10px 15px;
+  margin: 5px;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.btn.principal {
-  background: white;
-  color: var(--azul);
-  margin-bottom: 25px;
-}
-
-.btn.rojo {
-  background: var(--rojo);
+  border: none;
+  border-radius: 8px;
+  background: #333;
   color: white;
 }
 
-.btn.azul {
-  background: var(--azul);
-  color: white;
-}
-
-.btn.amarillo {
-  background: var(--amarillo);
-  color: black;
-}
-
-/* ===============================
-   SECCIONES
-================================ */
 .seccion {
-  padding: 60px 20px;
-  text-align: center;
+  margin-bottom: 60px;
 }
 
 .titulo-seccion {
-  font-size: 2.3rem;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
-/* ===============================
-   TARJETAS
-================================ */
+.mensaje-emocional {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .card {
   background: white;
-  max-width: 520px;
-  margin: auto;
-  padding: 30px;
-  border-radius: 25px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  padding: 15px;
+  border-radius: 15px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
 }
 
-.card p {
-  font-size: 1.1rem;
-  margin: 10px 0;
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
 }
