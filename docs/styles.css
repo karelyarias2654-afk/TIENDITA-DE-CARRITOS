@@ -409,14 +409,6 @@ button:active,
 }
 
 /* =============================== */
-/* CHICOS                          */
-/* =============================== */
-.mensaje-emocional.chicos {
-    background: linear-gradient(135deg, #d4fcd4, #9cff9c);
-    color: #145214;
-}
-
-/* =============================== */
 /* MEDIANOS                        */
 /* =============================== */
 .mensaje-emocional.medianos {
@@ -723,32 +715,6 @@ button, a, h1, h2, h3, p {
   transform: scale(0.96);
 }
 
-/* =============================== */
-/*   SECCIÓN CHICOS – NIVEL WOW 💖 */
-/* =============================== */
-
-.anim-chicos {
-  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
-  border-radius: 25px;
-  padding: 50px 25px;
-  margin-top: 60px;
-}
-
-/* TÍTULO DORADO */
-.anim-chicos .titulo-seccion {
-  color: #d4af37; /* dorado */
-  font-size: 34px;
-  font-weight: 900;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.25);
-}
-
-/* CONTENEDOR MENSAJE */
-.anim-chicos .mensaje-emocional {
-  background: rgba(255,255,255,0.75);
-  border-radius: 20px;
-  padding: 25px;
-}
-
 /* PRIMERA FRASE – ROJO */
 .anim-chicos .mensaje-emocional h3 {
   color: #c62828;
@@ -836,3 +802,4 @@ button, a, h1, h2, h3, p {
   font-size: 21px;
   font-weight: bold;
 }
+
