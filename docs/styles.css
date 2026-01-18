@@ -4,3 +4,8 @@ body {
   color: #000000;
   font-family: Arial, sans-serif;
 }
+
+body {
+  background: #111;
+  color: white;
+}
