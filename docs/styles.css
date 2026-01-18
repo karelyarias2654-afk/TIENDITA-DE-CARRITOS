@@ -660,16 +660,65 @@ button, a, h1, h2, h3, p {
   margin-bottom: 30px;
 }
 
-/* ===== BOTONES ===== */
+/* =============================== */
+/* BOTONES AZULES CON MONERÍA 💙✨ */
+/* =============================== */
 
 .botones-hero button {
-  background-color: #fbc02d;
-  color: #000;
+  background: linear-gradient(
+    135deg,
+    #0d47a1,
+    #1976d2,
+    #42a5f5
+  );
+  color: #fff;
   border: none;
-  padding: 14px 22px;
+  padding: 15px 26px;
   font-size: 16px;
-  border-radius: 14px;
+  border-radius: 18px;
   cursor: pointer;
-  margin: 10px;
+  margin: 12px;
   font-weight: bold;
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 8px 18px rgba(25, 118, 210, 0.45),
+    inset 0 0 0 rgba(255,255,255,0);
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ EFECTO LUZ AL PASAR */
+.botones-hero button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.botones-hero button:hover::before {
+  left: 120%;
+}
+
+/* 🚀 HOVER */
+.botones-hero button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 14px 30px rgba(25, 118, 210, 0.6);
+}
+
+/* 💥 CLICK */
+.botones-hero button:active {
+  transform: scale(0.96);
 }
