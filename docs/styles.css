@@ -586,3 +586,82 @@ button, a, h1, h2, h3, p {
   transition: all 0.6s ease;
 }
 
+/* =============================== */
+/* HERO SECTION PREMIUM 🚗✨ */
+/* =============================== */
+
+.hero {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  padding: 70px 30px;
+  border-radius: 25px;
+  margin-bottom: 60px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* ===== TITULO DORADO PREMIUM ===== */
+
+.titulo-principal {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #f9c74f;
+  letter-spacing: 2px;
+  position: relative;
+
+  /* brillo dorado */
+  background: linear-gradient(
+    90deg,
+    #fbc02d,
+    #fff8e1,
+    #fbc02d
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: brilloTitulo 3s infinite linear;
+}
+
+@keyframes brilloTitulo {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* ===== FRASE ROJA ===== */
+
+.frase-fija {
+  font-size: 1.3rem;
+  color: #e53935;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ===== FRASE ROTATIVA DORADA ===== */
+
+.frase-rotativa {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffd54f;
+  margin-bottom: 30px;
+  transition: opacity 0.4s ease;
+}
+
+/* ===== BOTONES ===== */
+
+.botones-hero button {
+  background-color: #fbc02d;
+  color: #000;
+  border: none;
+  padding: 14px 22px;
+  font-size: 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.botones-hero button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+}
+
