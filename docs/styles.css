@@ -827,5 +827,25 @@ button, a, h1, h2, h3, p {
   margin-bottom: 14px;
 }
 
+/* ===== FRASES ROSA UNIDAS ===== */
+.frases-rosa {
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+  padding: 14px 18px;
+  border-radius: 18px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* quitar separación interna */
+.frases-rosa p {
+  margin: 6px 0;
+  color: #1565c0; /* azul */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.frases-rosa p:first-child {
+  margin-bottom: 4px;
+}
 
 
