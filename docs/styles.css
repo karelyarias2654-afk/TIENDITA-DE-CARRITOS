@@ -89,7 +89,7 @@ button:active {
 /* ========================================= */
 
 .titulo-seccion {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 25px;
     font-size: 28px;
     color: #d32f2f;
@@ -832,6 +832,7 @@ button, a, h1, h2, h3, p {
 .frases-rosa p:first-child {
   margin-bottom: 4px;
 }
+
 
 
 
