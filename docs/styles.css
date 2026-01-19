@@ -322,7 +322,7 @@ button:active {
 /* =============================== */
 
 .mensaje-emocional {
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 30px;
     background: linear-gradient(135deg, #fff3e0, #e3f2fd);
     border-radius: 20px;
@@ -832,6 +832,7 @@ button, a, h1, h2, h3, p {
 .frases-rosa p:first-child {
   margin-bottom: 4px;
 }
+
 
 
 
