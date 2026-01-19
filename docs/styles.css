@@ -583,7 +583,7 @@ button, a, h1, h2, h3, p {
 /* =============================== */
 
 .hero {
-  padding: 60px 20px;
+  padding: 30px 20px;
   margin-bottom: 20px;
 }
 
@@ -832,6 +832,7 @@ button, a, h1, h2, h3, p {
 .frases-rosa p:first-child {
   margin-bottom: 4px;
 }
+
 
 
 
