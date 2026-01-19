@@ -729,7 +729,7 @@ button, a, h1, h2, h3, p {
 /* SECCIÓN GENERAL */
 .anim-chicos {
   padding: 50px 25px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 /* TÍTULO SIN FONDO */
@@ -832,6 +832,7 @@ button, a, h1, h2, h3, p {
 .frases-rosa p:first-child {
   margin-bottom: 4px;
 }
+
 
 
 
