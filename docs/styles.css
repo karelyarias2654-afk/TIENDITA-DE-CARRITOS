@@ -252,7 +252,7 @@ button:active {
 @media (max-width: 600px) {
 
     body {
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
     .contenedor {
@@ -832,6 +832,7 @@ button, a, h1, h2, h3, p {
 .frases-rosa p:first-child {
   margin-bottom: 4px;
 }
+
 
 
 
