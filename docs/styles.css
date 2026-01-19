@@ -6,7 +6,7 @@ body {
     background: linear-gradient(135deg, #e3f2fd, #fffde7);
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 20px;
     transition: background-color 0.5s ease;
 }
 
@@ -832,6 +832,7 @@ button, a, h1, h2, h3, p {
 .frases-rosa p:first-child {
   margin-bottom: 4px;
 }
+
 
 
 
