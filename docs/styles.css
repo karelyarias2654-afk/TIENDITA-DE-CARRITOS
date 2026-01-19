@@ -584,7 +584,7 @@ button, a, h1, h2, h3, p {
 
 .hero {
   padding: 60px 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 /* ===== TITULO DORADO REAL ===== */
@@ -729,7 +729,7 @@ button, a, h1, h2, h3, p {
 /* SECCIÓN GENERAL */
 .anim-chicos {
   padding: 50px 25px;
-  margin-top: 60px;
+  margin-top: 25px;
 }
 
 /* TÍTULO SIN FONDO */
@@ -832,6 +832,7 @@ button, a, h1, h2, h3, p {
 .frases-rosa p:first-child {
   margin-bottom: 4px;
 }
+
 
 
 
