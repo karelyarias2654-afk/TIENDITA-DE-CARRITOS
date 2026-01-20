@@ -817,19 +817,26 @@ button, a, h1, h2, h3, p {
   gap: 2px;                   /* 🔥 FRASES PEGADAS */
 }
 
-/* quitar separación interna */
+/* FRASES ROSA - ESTILO GENERAL */
 .frases-rosa p {
-  margin: 0;          /* 🔥 QUITA ESPACIO */
+  margin: 0;
   padding: 0;
-  line-height: 1.2;   /* 🔥 TEXTO COMPACTO */
+  line-height: 1.2;
   color: #1565c0;
   font-size: 18px;
+  font-weight: normal;
+}
+
+/* SEGUNDA FRASE EN NEGRITAS */
+.frases-rosa p:first-child {
   font-weight: bold;
 }
+
 
 .frases-rosa p:first-child {
   margin-bottom: 4px;
 }
+
 
 
 
