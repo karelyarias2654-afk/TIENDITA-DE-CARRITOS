@@ -609,8 +609,6 @@ button, a, h1, h2, h3, p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: doradoBrillo 4s infinite linear;
-
   text-shadow:
     0 0 8px rgba(255, 215, 0, 0.6),
     0 0 15px rgba(255, 215, 0, 0.4);
@@ -832,6 +830,7 @@ button, a, h1, h2, h3, p {
 .frases-rosa p:first-child {
   margin-bottom: 4px;
 }
+
 
 
 
