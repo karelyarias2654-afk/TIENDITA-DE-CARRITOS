@@ -837,65 +837,73 @@ button, a, h1, h2, h3, p {
   margin-bottom: 4px;
 }
 
-/* =============================== */
-/*   MEDIANOS – DISEÑO PREMIUM 💛  */
-/* =============================== */
+    /* =============================== */
+    /*   MEDIANOS – DISEÑO PREMIUM 💛  */
+    /* =============================== */
+    
+    /* TÍTULO MEDIANOS */
+    .anim-medianos .titulo-seccion {
+      color: #c62828; /* rojo */
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+    
+    /* HOVER TÍTULO (SE HACE GRANDE) */
+    .anim-medianos .titulo-seccion:hover {
+      transform: scale(1.1);
+    }
+    
+    /* CÍRCULO AMARILLO */
+    .anim-medianos .titulo-seccion::before {
+      content: "🟡 ";
+    }
+    
+    /* PRIMERA FRASE – AZUL */
+    .anim-medianos .mensaje-emocional h3 {
+      color: #1565c0;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
 
-/* TÍTULO MEDIANOS */
-.anim-medianos .titulo-seccion {
-  color: #c62828; /* rojo */
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.35);
-  transition: transform 0.4s ease;
-  cursor: pointer;
-}
-
-/* HOVER TÍTULO (SE HACE GRANDE) */
-.anim-medianos .titulo-seccion:hover {
-  transform: scale(1.1);
-}
-
-/* CÍRCULO AMARILLO */
-.anim-medianos .titulo-seccion::before {
-  content: "🟡 ";
-}
-
-/* PRIMERA FRASE – AZUL */
-.anim-medianos .mensaje-emocional h3 {
-  color: #1565c0;
-  font-size: 22px;
-  margin-bottom: 14px;
-}
-
-/* CONTENEDOR AMARILLO (2ª Y 3ª FRASE) */
-.frases-amarillas {
-  background: linear-gradient(135deg, #fff4c2, #ffd966);
-  padding: 14px 18px;
-  border-radius: 18px;
-  max-width: 520px;
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-/* TEXTO GENERAL */
-.frases-amarillas p {
-  margin: 0;
+/* QUITAR FONDO GENERAL EN MEDIANOS */
+.anim-medianos .mensaje-emocional {
+  background: none !important;
+  box-shadow: none;
   padding: 0;
-  line-height: 1.2;
-  font-size: 18px;
-  color: #c62828; /* rojo */
 }
 
-/* SEGUNDA FRASE EN NEGRITAS */
-.frases-amarillas p:first-child {
-  font-weight: bold;
-}
-
+    /* CONTENEDOR AMARILLO (2ª Y 3ª FRASE) */
+    .frases-amarillas {
+      background: linear-gradient(135deg, #fff4c2, #ffd966);
+      padding: 14px 18px;
+      border-radius: 18px;
+      max-width: 520px;
+      margin: 0 auto;
+    
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    
+    /* TEXTO GENERAL */
+    .frases-amarillas p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+      font-size: 18px;
+      color: #c62828; /* rojo */
+    }
+    
+    /* SEGUNDA FRASE EN NEGRITAS */
+    .frases-amarillas p:first-child {
+      font-weight: bold;
+    }
+    
+    
 
 
 
