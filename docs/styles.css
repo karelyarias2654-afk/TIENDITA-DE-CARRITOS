@@ -979,10 +979,8 @@ button, a, h1, h2, h3, p {
   font-weight: bold;
 }
 
-/* Quitar espacio entre frases de CHICOS */
-.frases-rosa p {
-  margin: 0;
-}
+
+
 
 
 
