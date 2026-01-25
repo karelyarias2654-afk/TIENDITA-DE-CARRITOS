@@ -979,6 +979,21 @@ button, a, h1, h2, h3, p {
   font-weight: bold;
 }
 
+/* 💓 EFECTO LATIDO SUAVE – TÍTULO PRINCIPAL */
+@keyframes latidoPrincipal {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* APLICAR SOLO AL TÍTULO DE LA PÁGINA */
+.titulo-principal {
+  animation: latidoPrincipal 3s ease-in-out infinite;
+}
+
 
 
 
