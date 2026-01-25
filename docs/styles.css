@@ -886,7 +886,7 @@ button, a, h1, h2, h3, p {
     
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 2px; 🔥 ESPACIO ENTRE 2ª Y 3ª FRASE */
     }
     
     /* TEXTO GENERAL */
@@ -968,6 +968,7 @@ button, a, h1, h2, h3, p {
 .frases-azules p:first-child {
   font-weight: bold;
 }
+
 
 
 
