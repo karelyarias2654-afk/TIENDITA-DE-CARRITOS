@@ -876,18 +876,18 @@ button, a, h1, h2, h3, p {
   padding: 0;
 }
 
-    /* CONTENEDOR AMARILLO (2ª Y 3ª FRASE) */
-    .frases-amarillas {
-      background: linear-gradient(135deg, #fff4c2, #ffd966);
-      padding: 14px 18px;
-      border-radius: 18px;
-      max-width: 520px;
-      margin: 0 auto;
-    
-      display: flex;
-      flex-direction: column;
-      gap: 2px; 🔥 ESPACIO ENTRE 2ª Y 3ª FRASE */
-    }
+/* CONTENEDOR AMARILLO (2ª Y 3ª FRASE) */
+.frases-amarillas {
+  background: linear-gradient(135deg, #fff4c2, #ffd966);
+  padding: 14px 18px;
+  border-radius: 18px;
+  max-width: 520px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 🔥 ESPACIO ENTRE 2ª Y 3ª FRASE */
+}
     
     /* TEXTO GENERAL */
     .frases-amarillas p {
@@ -968,6 +968,7 @@ button, a, h1, h2, h3, p {
 .frases-azules p:first-child {
   font-weight: bold;
 }
+
 
 
 
