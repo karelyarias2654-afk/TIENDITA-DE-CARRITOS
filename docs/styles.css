@@ -539,6 +539,11 @@ button, a, h1, h2, h3, p {
   }
 }
 
+/* ESPACIO ENTRE MEDIANOS Y GRANDES */
+.anim-grandes {
+  margin-top: 90px;
+}
+
 /* ===== GRANDES ===== */
 .anim-grandes.show {
   animation: grandesIn 0.9s ease forwards;
@@ -973,6 +978,7 @@ button, a, h1, h2, h3, p {
 .frases-azules p:first-child {
   font-weight: bold;
 }
+
 
 
 
