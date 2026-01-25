@@ -518,6 +518,11 @@ button, a, h1, h2, h3, p {
   }
 }
 
+/* ESPACIO ENTRE CHICOS Y MEDIANOS */
+.anim-medianos {
+  margin-top: 90px;
+}
+
 /* ===== MEDIANOS ===== */
 .anim-medianos.show {
   animation: medianosIn 0.8s ease forwards;
@@ -968,6 +973,7 @@ button, a, h1, h2, h3, p {
 .frases-azules p:first-child {
   font-weight: bold;
 }
+
 
 
 
