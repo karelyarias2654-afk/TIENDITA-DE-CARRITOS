@@ -903,7 +903,73 @@ button, a, h1, h2, h3, p {
       font-weight: bold;
     }
     
-    
+    /* =============================== */
+/*   GRANDES – DISEÑO PREMIUM 💙  */
+/* =============================== */
+
+/* TÍTULO GRANDES */
+.anim-grandes .titulo-seccion {
+  color: #d4af37; /* dorado */
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+/* HOVER TÍTULO */
+.anim-grandes .titulo-seccion:hover {
+  transform: scale(1.1);
+}
+
+/* CÍRCULO AZUL */
+.anim-grandes .titulo-seccion::before {
+  content: "🔵 ";
+}
+
+/* PRIMERA FRASE – ROJO */
+.anim-grandes .mensaje-emocional h3 {
+  color: #c62828;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+/* QUITAR FONDO GENERAL EN GRANDES */
+.anim-grandes .mensaje-emocional {
+  background: none !important;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* CONTENEDOR AZUL (2ª Y 3ª FRASE) */
+.frases-azules {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  padding: 14px 18px;
+  border-radius: 18px;
+  max-width: 520px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 🔥 ESPACIO ENTRE 2ª Y 3ª FRASE */
+}
+
+/* TEXTO GENERAL */
+.frases-azules p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-size: 18px;
+  color: #ffeb3b; /* amarillo */
+}
+
+/* SEGUNDA FRASE EN NEGRITAS */
+.frases-azules p:first-child {
+  font-weight: bold;
+}
+
+
 
 
 
