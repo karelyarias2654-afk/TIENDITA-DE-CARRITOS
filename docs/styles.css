@@ -814,7 +814,7 @@ button, a, h1, h2, h3, p {
 
   display: flex;              /* 🔥 */
   flex-direction: column;     /* 🔥 */
-  gap: 2px;                   /* 🔥 FRASES PEGADAS */
+  gap: 10px;                   /* 🔥 FRASES PEGADAS */
 }
 
 /* FRASES ROSA - ESTILO GENERAL */
@@ -968,6 +968,7 @@ button, a, h1, h2, h3, p {
 .frases-azules p:first-child {
   font-weight: bold;
 }
+
 
 
 
