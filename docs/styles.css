@@ -997,8 +997,6 @@ button, a, h1, h2, h3, p {
   margin-bottom: 20px;
   text-align: center;
 
-  color: transparent; /* evita texto negro */
-
   /* DORADO */
   background: linear-gradient(
     90deg,
@@ -1012,16 +1010,10 @@ button, a, h1, h2, h3, p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-    /* CONTORNO NEGRO ULTRA FINO */
-text-shadow:
-  0.5px  0.5px  0 rgba(0,0,0,0.6),
- -0.5px  0.5px  0 rgba(0,0,0,0.6),
-  0.5px -0.5px  0 rgba(0,0,0,0.6),
- -0.5px -0.5px  0 rgba(0,0,0,0.6);
+  /* CONTORNO NEGRO REAL Y DELGADITO */
+  -webkit-text-stroke: 0.6px rgba(0,0,0,0.8);
 
-  /* LATIDO SUAVE */
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
-
 
 
