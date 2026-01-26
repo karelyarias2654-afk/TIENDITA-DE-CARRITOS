@@ -64,7 +64,7 @@ button:active {
     margin: auto;
     border-radius: 20px;
     box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-    animation: aparecer 0.8s ease-out;
+    /* animation: aparecer 0.8s ease-out; */
 }
 
 @keyframes aparecer {
@@ -135,7 +135,7 @@ button:active {
     /* Animación entrada */
     opacity: 0;
     transform: translateY(40px);
-    animation: entradaCard 0.8s ease forwards;
+    /* animation: entradaCard 0.8s ease forwards; */
 
     /* Hover premium */
     transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -467,7 +467,8 @@ button, a, h1, h2, h3, p {
 
 /* ===== CHICOS ===== */
 .anim-chicos.show {
-  animation: chicosIn 0.8s ease forwards;
+.anim-chicos.show {
+  /* animation: chicosIn 0.8s ease forwards; */
 }
 
 @keyframes chicosIn {
@@ -488,7 +489,7 @@ button, a, h1, h2, h3, p {
 
 /* ===== MEDIANOS ===== */
 .anim-medianos.show {
-  animation: medianosIn 0.8s ease forwards;
+    /* animation: medianosIn 0.8s ease forwards; */
 }
 
 @keyframes medianosIn {
@@ -509,7 +510,7 @@ button, a, h1, h2, h3, p {
 
 /* ===== GRANDES ===== */
 .anim-grandes.show {
-  animation: grandesIn 0.9s ease forwards;
+  /* animation: grandesIn 0.9s ease forwards; */
 }
 
 @keyframes grandesIn {
@@ -525,8 +526,7 @@ button, a, h1, h2, h3, p {
 
 /* ===== MENSAJES ===== */
 .anim-mensaje.show {
-  animation: mensajeIn 1s ease forwards;
-}
+   /* animation: mensajeIn 1s ease forwards; */
 
 @keyframes mensajeIn {
   from {
@@ -993,5 +993,6 @@ button, a, h1, h2, h3, p {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
