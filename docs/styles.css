@@ -1012,15 +1012,16 @@ button, a, h1, h2, h3, p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  /* CONTORNO NEGRO FINO */
-  text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+    /* CONTORNO NEGRO ULTRA FINO */
+text-shadow:
+  0.5px  0.5px  0 rgba(0,0,0,0.6),
+ -0.5px  0.5px  0 rgba(0,0,0,0.6),
+  0.5px -0.5px  0 rgba(0,0,0,0.6),
+ -0.5px -0.5px  0 rgba(0,0,0,0.6);
 
   /* LATIDO SUAVE */
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
 
 
