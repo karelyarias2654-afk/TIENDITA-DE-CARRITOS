@@ -994,5 +994,30 @@ button, a, h1, h2, h3, p {
   transform: translateY(0);
 }
 
+/* ============================= */
+/* NORMALIZAR TODOS LOS TÍTULOS */
+/* ============================= */
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.2;
+  transform: none;
+}
+
+    h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
 
 
