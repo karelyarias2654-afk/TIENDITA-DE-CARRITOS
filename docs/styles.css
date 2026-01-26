@@ -442,16 +442,6 @@ button:active,
 /* ANIMACIONES AL PASAR SECCIÓN ✨ */
 /* =============================== */
 
-.scroll {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.9s ease;
-}
-
-.scroll.activo {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* =============================== */
 /* ANIMACIÓN DE CARRITOS UNO A UNO */
@@ -470,36 +460,9 @@ button:active,
   transform: translateY(0) scale(1);
 }
 
-/* =============================== */
-/* ANIMACIÓN SCROLL CORREGIDA      */
-/* =============================== */
-
-.scroll {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s ease;
-}
-
-.scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Para que NUNCA desaparezcan cosas */
 button, a, h1, h2, h3, p {
   opacity: 1;
-}
-
-/* ESTADO INICIAL */
-.scroll {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.scroll.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* ===== CHICOS ===== */
@@ -1014,6 +977,21 @@ button, a, h1, h2, h3, p {
   -webkit-text-stroke: 0.6px rgba(0,0,0,0.8);
 
   animation: latidoPrincipal 3s ease-in-out infinite;
+}
+
+/* =============================== */
+/* SCROLL ANIMATION LIMPIA 🚀     */
+/* =============================== */
+
+.scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+}
+
+.scroll.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
