@@ -64,7 +64,7 @@ button:active {
     margin: auto;
     border-radius: 20px;
     box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-    /* animation: aparecer 0.8s ease-out; */
+    animation: aparecer 0.8s ease-out;
 }
 
 @keyframes aparecer {
@@ -135,7 +135,7 @@ button:active {
     /* Animación entrada */
     opacity: 0;
     transform: translateY(40px);
-    /* animation: entradaCard 0.8s ease forwards; */
+    animation: entradaCard 0.8s ease forwards;
 
     /* Hover premium */
     transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -442,6 +442,16 @@ button:active,
 /* ANIMACIONES AL PASAR SECCIÓN ✨ */
 /* =============================== */
 
+.scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s ease;
+}
+
+.scroll.activo {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* =============================== */
 /* ANIMACIÓN DE CARRITOS UNO A UNO */
@@ -460,15 +470,41 @@ button:active,
   transform: translateY(0) scale(1);
 }
 
+/* =============================== */
+/* ANIMACIÓN SCROLL CORREGIDA      */
+/* =============================== */
+
+.scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Para que NUNCA desaparezcan cosas */
 button, a, h1, h2, h3, p {
   opacity: 1;
 }
 
+/* ESTADO INICIAL */
+.scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== CHICOS ===== */
 .anim-chicos.show {
-.anim-chicos.show {
-  /* animation: chicosIn 0.8s ease forwards; */
+  animation: chicosIn 0.8s ease forwards;
 }
 
 @keyframes chicosIn {
@@ -489,7 +525,7 @@ button, a, h1, h2, h3, p {
 
 /* ===== MEDIANOS ===== */
 .anim-medianos.show {
-    /* animation: medianosIn 0.8s ease forwards; */
+  animation: medianosIn 0.8s ease forwards;
 }
 
 @keyframes medianosIn {
@@ -510,7 +546,7 @@ button, a, h1, h2, h3, p {
 
 /* ===== GRANDES ===== */
 .anim-grandes.show {
-  /* animation: grandesIn 0.9s ease forwards; */
+  animation: grandesIn 0.9s ease forwards;
 }
 
 @keyframes grandesIn {
@@ -526,7 +562,8 @@ button, a, h1, h2, h3, p {
 
 /* ===== MENSAJES ===== */
 .anim-mensaje.show {
-   /* animation: mensajeIn 1s ease forwards; */
+  animation: mensajeIn 1s ease forwards;
+}
 
 @keyframes mensajeIn {
   from {
@@ -952,72 +989,7 @@ button, a, h1, h2, h3, p {
   }
 }
 
-/* 👑 TÍTULO PRINCIPAL – DORADO CON CONTORNO NEGRO FINO */
+/* APLICAR SOLO AL TÍTULO DE LA PÁGINA */
 .titulo-principal {
-  font-size: 3.2rem;
-  font-weight: 900;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-  text-align: center;
-
-  /* DORADO */
-  background: linear-gradient(
-    90deg,
-    #b8860b,
-    #ffd700,
-    #fff8dc,
-    #ffd700,
-    #b8860b
-  );
-  background-size: 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* CONTORNO NEGRO REAL Y DELGADITO */
-  -webkit-text-stroke: 0.6px rgba(0,0,0,0.8);
-
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
-
-/* =============================== */
-/* SCROLL ANIMATION LIMPIA 🚀     */
-/* =============================== */
-
-.scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
-}
-
-.scroll.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ============================= */
-/* NORMALIZAR TODOS LOS TÍTULOS */
-/* ============================= */
-
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  text-align: center;
-  margin: 20px 0;
-  line-height: 1.2;
-  transform: none;
-}
-
-    h1 {
-  font-size: 2.2rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
-
-
-
