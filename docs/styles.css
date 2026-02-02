@@ -619,11 +619,8 @@ button, a, h1, h2, h3, p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-text-shadow:
-  1px 0 0 #000,
- -1px 0 0 #000,
-  0 1px 0 #000,
-  0 -1px 0 #000;
+/* CONTORNO NEGRO FINO REAL */
+-webkit-text-stroke: 0.6px #000;
 }
 
 @keyframes doradoBrillo {
@@ -995,4 +992,5 @@ text-shadow:
 .titulo-principal {
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
 
