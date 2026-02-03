@@ -995,29 +995,30 @@ button, a, h1, h2, h3, p {
 }
 
 /* =============================== */
-/* CONTORNO ULTRA FINO TÍTULO ✨ */
+/* CONTORNO SUPER EXTRA FINO 💎 */
 /* =============================== */
 
 .titulo-principal {
   text-shadow:
-    -0.3px -0.3px 0 rgba(122, 74, 0, 0.8),
-     0.3px -0.3px 0 rgba(122, 74, 0, 0.8),
-    -0.3px  0.3px 0 rgba(122, 74, 0, 0.8),
-     0.3px  0.3px 0 rgba(122, 74, 0, 0.8);
+    -0.2px -0.2px 0 rgba(90, 55, 15, 0.65),
+     0.2px -0.2px 0 rgba(90, 55, 15, 0.65),
+    -0.2px  0.2px 0 rgba(90, 55, 15, 0.65),
+     0.2px  0.2px 0 rgba(90, 55, 15, 0.65);
 }
 
 /* =============================== */
-/* CONTORNO ULTRA FINO ESTRELLAS ✨ */
+/* ESTRELLITAS SUPER FINAS ✨ */
 /* =============================== */
 
 .titulo-principal span,
 .titulo-principal::before,
 .titulo-principal::after {
   text-shadow:
-    -0.3px -0.3px 0 rgba(122, 74, 0, 0.8),
-     0.3px -0.3px 0 rgba(122, 74, 0, 0.8),
-    -0.3px  0.3px 0 rgba(122, 74, 0, 0.8),
-     0.3px  0.3px 0 rgba(122, 74, 0, 0.8);
+    -0.2px -0.2px 0 rgba(90, 55, 15, 0.65),
+     0.2px -0.2px 0 rgba(90, 55, 15, 0.65),
+    -0.2px  0.2px 0 rgba(90, 55, 15, 0.65),
+     0.2px  0.2px 0 rgba(90, 55, 15, 0.65);
 }
+
 
 
