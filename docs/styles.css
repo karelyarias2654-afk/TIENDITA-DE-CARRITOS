@@ -14,8 +14,13 @@ body {
 /*              TEXTOS GENERALES              */
 /* ========================================= */
 
-h1 { color: #d32f2f; }
-h2 { color: #1976d2; }
+h1 {
+    color: #d32f2f; /* Rojo */
+}
+
+h2 {
+    color: #1976d2; /* Azul */
+}
 
 p {
     color: #424242;
@@ -27,7 +32,7 @@ p {
 /* ========================================= */
 
 button {
-    background-color: #fbc02d;
+    background-color: #fbc02d; /* Amarillo */
     color: #000;
     border: none;
     padding: 12px 20px;
@@ -43,7 +48,9 @@ button:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-button:active { transform: scale(0.95); }
+button:active {
+    transform: scale(0.95);
+}
 
 /* ========================================= */
 /*            CONTENEDOR PRINCIPAL            */
@@ -61,8 +68,20 @@ button:active { transform: scale(0.95); }
 }
 
 @keyframes aparecer {
-    from { opacity: 0; transform: translateY(25px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenedor:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    transform: translateY(-2px);
+    transition: all 0.4s ease;
 }
 
 /* ========================================= */
@@ -70,9 +89,22 @@ button:active { transform: scale(0.95); }
 /* ========================================= */
 
 .titulo-seccion {
-    margin: 20px 0 25px;
+    margin-top: 20px;
+    margin-bottom: 25px;
     font-size: 28px;
     color: #d32f2f;
+    animation: popTitulo 0.6s ease;
+}
+
+@keyframes popTitulo {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* ========================================= */
@@ -100,9 +132,12 @@ button:active { transform: scale(0.95); }
     position: relative;
     overflow: hidden;
 
+    /* Animación entrada */
     opacity: 0;
     transform: translateY(40px);
     animation: entradaCard 0.8s ease forwards;
+
+    /* Hover premium */
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -111,8 +146,41 @@ button:active { transform: scale(0.95); }
     box-shadow: 0 18px 40px rgba(0,0,0,0.3);
 }
 
+/* Delay automático */
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+
 @keyframes entradaCard {
-    to { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================= */
+/*        EFECTO LUZ PREMIUM EN TARJETA       */
+/* ========================================= */
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 235, 59, 0.5),
+        transparent
+    );
+    transition: 0.6s;
+}
+
+.card:hover::before {
+    left: 120%;
 }
 
 /* ========================================= */
@@ -124,11 +192,14 @@ button:active { transform: scale(0.95); }
     max-height: 220px;
     object-fit: contain;
     border-radius: 15px;
+    background-color: #fff;
     padding: 10px;
     transition: transform 0.4s ease;
 }
 
-.card:hover img { transform: scale(1.1); }
+.card:hover img {
+    transform: scale(1.1);
+}
 
 /* ========================================= */
 /*          NOMBRE Y PRECIO PRODUCTO          */
@@ -142,6 +213,7 @@ button:active { transform: scale(0.95); }
 }
 
 .precio {
+    margin: 5px 0;
     font-size: 17px;
     color: #388e3c;
     font-weight: bold;
@@ -159,18 +231,166 @@ button:active { transform: scale(0.95); }
     border-radius: 14px;
     text-decoration: none;
     font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
     animation: latido 2.5s infinite;
 }
 
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.08);
+}
+
 @keyframes latido {
-    0%,100% { transform: scale(1); }
+    0%, 100% { transform: scale(1); }
     50% { transform: scale(1.08); }
 }
 
 /* ========================================= */
-/*             MENSAJES EMOCIONALES            */
+/*              RESPONSIVE CELULAR            */
 /* ========================================= */
 
+@media (max-width: 600px) {
+
+    body {
+        margin-top: 10px;
+    }
+
+    .contenedor {
+        width: 92%;
+        padding: 25px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        max-height: 280px;
+    }
+}
+
+/* ========================================= */
+/*              MODO OSCURO REAL 🌙           */
+/* ========================================= */
+
+.dark {
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+}
+
+.dark .contenedor {
+    background-color: #1f1f1f;
+    box-shadow: 0 12px 35px rgba(255,255,255,0.08);
+}
+
+.dark h1 {
+    color: #f44336; /* rojo */
+}
+
+.dark h2 {
+    color: #64b5f6; /* azul */
+}
+
+.dark p,
+.dark .nombre {
+    color: #f5f5f5;
+}
+
+.dark .precio {
+    color: #81c784;
+}
+
+.dark button {
+    background-color: #fbc02d;
+    color: black;
+}
+
+/* ========================================= */
+/*           COLOR MÁGICO REAL 🎨             */
+/* ========================================= */
+
+.color-magico {
+    background: linear-gradient(
+        135deg,
+        #ff5252,
+        #448aff,
+        #ffeb3b
+    ) !important;
+}
+
+/* =============================== */
+/*        SECCIÓN EMOCIONAL ❤️     */
+/* =============================== */
+
+.mensaje-emocional {
+    margin-top: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, #fff3e0, #e3f2fd);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.mensaje-emocional h2 {
+    color: #d32f2f; /* rojo amor */
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.mensaje-emocional p {
+    font-size: 18px;
+    color: #424242;
+    line-height: 1.6;
+}
+
+.mensaje-emocional .firma {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f9a825; /* amarillo cálido */
+}
+
+/* =============================== */
+/*    WHATSAPP FLOTANTE 📲✨       */
+/* =============================== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: latido 2s infinite;
+    z-index: 999;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.15);
+}
+
+/* =============================== */
+/* MICRO INTERACCIONES GLOBALES ✨ */
+/* =============================== */
+
+button, .card, .btn-whatsapp {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:active,
+.card:active,
+.btn-whatsapp:active {
+    transform: scale(0.97);
+}
+
+/* =============================== */
+/* MENSAJES EMOCIONALES            */
+/* =============================== */
 .mensaje-emocional {
     padding: 25px;
     margin: 30px 0;
@@ -180,88 +400,596 @@ button:active { transform: scale(0.95); }
     animation: aparecer 1.2s ease;
 }
 
-/* ========================================= */
-/*             SCROLL ANIMADO                 */
-/* ========================================= */
+.mensaje-emocional h2 {
+    margin-bottom: 10px;
+}
+
+.mensaje-emocional p {
+    font-size: 1.05em;
+}
+
+/* =============================== */
+/* MEDIANOS                        */
+/* =============================== */
+.mensaje-emocional.medianos {
+    background: linear-gradient(135deg, #fff4c2, #ffd966);
+    color: #7a5a00;
+}
+
+/* =============================== */
+/* GRANDES                         */
+/* =============================== */
+.mensaje-emocional.grandes {
+    background: linear-gradient(135deg, #d6e6ff, #8bb6ff);
+    color: #0b2c5d;
+}
+
+/* =============================== */
+/* ANIMACIÓN                       */
+/* =============================== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =============================== */
+/* ANIMACIONES AL PASAR SECCIÓN ✨ */
+/* =============================== */
 
 .scroll {
     opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
+    transform: translateY(50px);
+    transition: all 0.9s ease;
 }
 
-.scroll.show {
+.scroll.activo {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* ========================================= */
-/* HERO – TÍTULO DORADO                       */
-/* ========================================= */
+/* =============================== */
+/* ANIMACIÓN DE CARRITOS UNO A UNO */
+/* =============================== */
 
-.titulo-principal {
-    font-size: 3.2rem;
-    font-weight: 900;
-    letter-spacing: 3px;
-    background: linear-gradient(
-      90deg,
-      #b8860b,
-      #ffd700,
-      #fff8dc,
-      #ffd700,
-      #b8860b
-    );
-    background-size: 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: latidoPrincipal 3s ease-in-out infinite;
+.card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: 
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
-@keyframes latidoPrincipal {
-    0%,100% { transform: scale(1); }
-    50% { transform: scale(1.04); }
+.card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* =============================== */
-/* COLORES POR SECCIÓN (RESTORED) */
+/* ANIMACIÓN SCROLL CORREGIDA      */
 /* =============================== */
+
+.scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Para que NUNCA desaparezcan cosas */
+button, a, h1, h2, h3, p {
+  opacity: 1;
+}
+
+/* ESTADO INICIAL */
+.scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ===== CHICOS ===== */
-.anim-chicos .mensaje-emocional {
-  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+.anim-chicos.show {
+  animation: chicosIn 0.8s ease forwards;
 }
 
-.anim-chicos h3 {
-  color: #c62828;
+@keyframes chicosIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.anim-chicos p {
-  color: #1565c0;
+/* ESPACIO ENTRE CHICOS Y MEDIANOS */
+.anim-medianos {
+  margin-top: 90px;
 }
 
 /* ===== MEDIANOS ===== */
-.anim-medianos .mensaje-emocional {
-  background: linear-gradient(135deg, #fff4c2, #ffd966);
+.anim-medianos.show {
+  animation: medianosIn 0.8s ease forwards;
 }
 
-.anim-medianos h3 {
-  color: #1565c0;
+@keyframes medianosIn {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.anim-medianos p {
-  color: #c62828;
+/* ESPACIO ENTRE MEDIANOS Y GRANDES */
+.anim-grandes {
+  margin-top: 90px;
 }
 
 /* ===== GRANDES ===== */
-.anim-grandes .mensaje-emocional {
-  background: linear-gradient(135deg, #d6e6ff, #8bb6ff);
+.anim-grandes.show {
+  animation: grandesIn 0.9s ease forwards;
 }
 
-.anim-grandes h3 {
+@keyframes grandesIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== MENSAJES ===== */
+.anim-mensaje.show {
+  animation: mensajeIn 1s ease forwards;
+}
+
+@keyframes mensajeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== CARRITOS UNO POR UNO ===== */
+.anim-card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.anim-card.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+/* =============================== */
+/* HERO SIN FONDO – LUJO TOTAL ✨ */
+/* =============================== */
+
+.hero {
+  padding: 30px 20px;
+  margin-bottom: 20px;
+}
+
+/* ===== TITULO DORADO REAL ===== */
+
+.titulo-principal {
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  /* DORADO REAL (no amarillo) */
+  background: linear-gradient(
+    90deg,
+    #b8860b,
+    #ffd700,
+    #fff8dc,
+    #ffd700,
+    #b8860b
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.6),
+    0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+@keyframes doradoBrillo {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+/* ===== FRASE FIJA ROJA ===== */
+
+.frase-fija {
+  font-size: 1.3rem;
+  font-weight: bold;
   color: #c62828;
+  margin-bottom: 8px;
 }
 
-.anim-grandes p {
-  color: #0b2c5d;
+/* ===== FRASE ROTATIVA DORADA ===== */
+
+.frase-rotativa {
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  background: linear-gradient(
+    90deg,
+    #b8860b,
+    #ffd700,
+    #fff8dc,
+    #ffd700,
+    #b8860b
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: doradoBrillo 3s infinite linear;
+  margin-bottom: 30px;
 }
 
+/* =============================== */
+/* BOTONES AZULES CON MONERÍA 💙✨ */
+/* =============================== */
+
+.botones-hero button {
+  background: linear-gradient(
+    135deg,
+    #0d47a1,
+    #1976d2,
+    #42a5f5
+  );
+  color: #fff;
+  border: none;
+  padding: 15px 26px;
+  font-size: 16px;
+  border-radius: 18px;
+  cursor: pointer;
+  margin: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 8px 18px rgba(25, 118, 210, 0.45),
+    inset 0 0 0 rgba(255,255,255,0);
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ EFECTO LUZ AL PASAR */
+.botones-hero button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.botones-hero button:hover::before {
+  left: 120%;
+}
+
+/* 🚀 HOVER */
+.botones-hero button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 14px 30px rgba(25, 118, 210, 0.6);
+}
+
+/* 💥 CLICK */
+.botones-hero button:active {
+  transform: scale(0.96);
+}
+
+/* PRIMERA FRASE – ROJO */
+.anim-chicos .mensaje-emocional h3 {
+  color: #c62828;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* =============================== */
+/*   CHICOS – DISEÑO FINO ❤️✨     */
+/* =============================== */
+
+/* SECCIÓN GENERAL */
+.anim-chicos {
+  padding: 50px 25px;
+  margin-top: 10px;
+}
+
+/* TÍTULO SIN FONDO */
+.anim-chicos .titulo-seccion {
+  color: #d4af37; /* dorado */
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* EFECTO HOVER DEL TÍTULO */
+.anim-chicos .titulo-seccion:hover {
+  transform: scale(1.08);
+  text-shadow: 
+    0 0 8px #d4af37,
+    0 0 18px rgba(212,175,55,0.8);
+}
+
+/* CÍRCULO ROJO (EMOJI) */
+.anim-chicos .titulo-seccion::before {
+  content: "🔴 ";
+}
+
+/* CONTENEDOR MENSAJE */
+.anim-chicos .mensaje-emocional {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* PRIMERA FRASE – ROJO */
+.anim-chicos .mensaje-emocional h3 {
+  color: #c62828;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+/* SEGUNDA FRASE – AZUL */
+.anim-chicos .mensaje-emocional p:nth-of-type(1) {
+  color: #1565c0;
+  font-size: 18px;
+}
+
+/* 💥 ANULAR COMPLETAMENTE EL VERDE EN CHICOS */
+.anim-chicos .mensaje-emocional {
+  background: none !important;
+}
+
+/* CONTENEDOR ROSA PARA 2DA Y 3RA FRASE */
+.anim-chicos .frases-rosa {
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+  padding: 16px 20px;
+  border-radius: 18px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* SEGUNDA Y TERCERA FRASE – MISMO ESTILO */
+.anim-chicos .frases-rosa p {
+  background: none;
+  margin: 8px 0;
+  color: #1565c0; /* azul */
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* PRIMERA FRASE – ROJO */
+.anim-chicos .mensaje-emocional h3 {
+  color: #c62828;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+/* ===== FRASES ROSA UNIDAS (CORREGIDO) ===== */
+.frases-rosa {
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+  padding: 12px 18px;
+  border-radius: 18px;
+  max-width: 520px;
+  margin: 0 auto;
+
+  display: flex;              /* 🔥 */
+  flex-direction: column;     /* 🔥 */
+  gap: 10px;                   /* 🔥 FRASES PEGADAS */
+}
+
+/* FRASES ROSA - ESTILO GENERAL */
+.frases-rosa p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  color: #1565c0;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* SEGUNDA FRASE EN NEGRITAS */
+.frases-rosa p:first-child {
+  font-weight: bold;
+}
+
+
+.frases-rosa p:first-child {
+  margin-bottom: 4px;
+}
+
+    /* =============================== */
+    /*   MEDIANOS – DISEÑO PREMIUM 💛  */
+    /* =============================== */
+    
+    /* TÍTULO MEDIANOS */
+    .anim-medianos .titulo-seccion {
+      color: #c62828; /* rojo */
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+    
+    /* HOVER TÍTULO (SE HACE GRANDE) */
+    .anim-medianos .titulo-seccion:hover {
+      transform: scale(1.1);
+    }
+    
+    /* CÍRCULO AMARILLO */
+    .anim-medianos .titulo-seccion::before {
+      content: "🟡 ";
+    }
+    
+    /* PRIMERA FRASE – AZUL */
+    .anim-medianos .mensaje-emocional h3 {
+      color: #1565c0;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+/* QUITAR FONDO GENERAL EN MEDIANOS */
+.anim-medianos .mensaje-emocional {
+  background: none !important;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* CONTENEDOR AMARILLO (2ª Y 3ª FRASE) */
+.frases-amarillas {
+  background: linear-gradient(135deg, #fff4c2, #ffd966);
+  padding: 14px 18px;
+  border-radius: 18px;
+  max-width: 520px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 🔥 ESPACIO ENTRE 2ª Y 3ª FRASE */
+}
+    
+    /* TEXTO GENERAL */
+    .frases-amarillas p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+      font-size: 18px;
+      color: #c62828; /* rojo */
+    }
+    
+    /* SEGUNDA FRASE EN NEGRITAS */
+    .frases-amarillas p:first-child {
+      font-weight: bold;
+    }
+    
+    /* =============================== */
+/*   GRANDES – DISEÑO PREMIUM 💙  */
+/* =============================== */
+
+/* TÍTULO GRANDES */
+.anim-grandes .titulo-seccion {
+  color: #d4af37; /* dorado */
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+/* HOVER TÍTULO */
+.anim-grandes .titulo-seccion:hover {
+  transform: scale(1.1);
+}
+
+/* CÍRCULO AZUL */
+.anim-grandes .titulo-seccion::before {
+  content: "🔵 ";
+}
+
+/* PRIMERA FRASE – ROJO */
+.anim-grandes .mensaje-emocional h3 {
+  color: #c62828;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+/* QUITAR FONDO GENERAL EN GRANDES */
+.anim-grandes .mensaje-emocional {
+  background: none !important;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* CONTENEDOR AZUL (2ª Y 3ª FRASE) */
+.frases-azules {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  padding: 14px 18px;
+  border-radius: 18px;
+  max-width: 520px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 🔥 ESPACIO ENTRE 2ª Y 3ª FRASE */
+}
+
+/* TEXTO GENERAL */
+.frases-azules p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-size: 18px;
+  color: #ffeb3b; /* amarillo */
+}
+
+/* SEGUNDA FRASE EN NEGRITAS */
+.frases-azules p:first-child {
+  font-weight: bold;
+}
+
+/* 💓 EFECTO LATIDO SUAVE – TÍTULO PRINCIPAL */
+@keyframes latidoPrincipal {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* APLICAR SOLO AL TÍTULO DE LA PÁGINA */
+.titulo-principal {
+  animation: latidoPrincipal 3s ease-in-out infinite;
+}
