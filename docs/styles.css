@@ -221,3 +221,47 @@ button:active { transform: scale(0.95); }
     0%,100% { transform: scale(1); }
     50% { transform: scale(1.04); }
 }
+
+/* =============================== */
+/* COLORES POR SECCIÓN (RESTORED) */
+/* =============================== */
+
+/* ===== CHICOS ===== */
+.anim-chicos .mensaje-emocional {
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+}
+
+.anim-chicos h3 {
+  color: #c62828;
+}
+
+.anim-chicos p {
+  color: #1565c0;
+}
+
+/* ===== MEDIANOS ===== */
+.anim-medianos .mensaje-emocional {
+  background: linear-gradient(135deg, #fff4c2, #ffd966);
+}
+
+.anim-medianos h3 {
+  color: #1565c0;
+}
+
+.anim-medianos p {
+  color: #c62828;
+}
+
+/* ===== GRANDES ===== */
+.anim-grandes .mensaje-emocional {
+  background: linear-gradient(135deg, #d6e6ff, #8bb6ff);
+}
+
+.anim-grandes h3 {
+  color: #c62828;
+}
+
+.anim-grandes p {
+  color: #0b2c5d;
+}
+
