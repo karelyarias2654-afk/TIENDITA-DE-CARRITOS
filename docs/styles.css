@@ -993,3 +993,30 @@ button, a, h1, h2, h3, p {
 .titulo-principal {
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
+/* =============================== */
+/* CONTORNO FINO TÍTULO PRINCIPAL */
+/* =============================== */
+
+.titulo-principal {
+  color: #f5c542; /* doradito que ya usas */
+  text-shadow:
+    -0.6px -0.6px 0 #7a4a00,
+     0.6px -0.6px 0 #7a4a00,
+    -0.6px  0.6px 0 #7a4a00,
+     0.6px  0.6px 0 #7a4a00;
+}
+
+/* =============================== */
+/* CONTORNO FINO PARA ESTRELLITAS */
+/* =============================== */
+
+.titulo-principal span,
+.titulo-principal::before,
+.titulo-principal::after {
+  text-shadow:
+    -0.6px -0.6px 0 #7a4a00,
+     0.6px -0.6px 0 #7a4a00,
+    -0.6px  0.6px 0 #7a4a00,
+     0.6px  0.6px 0 #7a4a00;
+}
