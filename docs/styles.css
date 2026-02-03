@@ -995,28 +995,29 @@ button, a, h1, h2, h3, p {
 }
 
 /* =============================== */
-/* CONTORNO FINO TÍTULO PRINCIPAL */
+/* CONTORNO ULTRA FINO TÍTULO ✨ */
 /* =============================== */
 
 .titulo-principal {
-  color: #f5c542; /* doradito que ya usas */
   text-shadow:
-    -0.6px -0.6px 0 #7a4a00,
-     0.6px -0.6px 0 #7a4a00,
-    -0.6px  0.6px 0 #7a4a00,
-     0.6px  0.6px 0 #7a4a00;
+    -0.3px -0.3px 0 rgba(122, 74, 0, 0.8),
+     0.3px -0.3px 0 rgba(122, 74, 0, 0.8),
+    -0.3px  0.3px 0 rgba(122, 74, 0, 0.8),
+     0.3px  0.3px 0 rgba(122, 74, 0, 0.8);
 }
 
 /* =============================== */
-/* CONTORNO FINO PARA ESTRELLITAS */
+/* CONTORNO ULTRA FINO ESTRELLAS ✨ */
 /* =============================== */
 
 .titulo-principal span,
 .titulo-principal::before,
 .titulo-principal::after {
   text-shadow:
-    -0.6px -0.6px 0 #7a4a00,
-     0.6px -0.6px 0 #7a4a00,
-    -0.6px  0.6px 0 #7a4a00,
-     0.6px  0.6px 0 #7a4a00;
+    -0.3px -0.3px 0 rgba(122, 74, 0, 0.8),
+     0.3px -0.3px 0 rgba(122, 74, 0, 0.8),
+    -0.3px  0.3px 0 rgba(122, 74, 0, 0.8),
+     0.3px  0.3px 0 rgba(122, 74, 0, 0.8);
 }
+
+
