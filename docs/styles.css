@@ -995,19 +995,12 @@ button, a, h1, h2, h3, p {
 }
 
 /* =============================== */
-/* TITULO DORADO + CONTORNO REAL 🖤 */
+/* FIX DEFINITIVO DORADO + CONTORNO */
 /* =============================== */
 
 .titulo-principal {
-  font-size: 3.2rem;
-  font-weight: 900;
-  letter-spacing: 3px;
-  text-align: center;
+  color: #b8860b !important;
 
-  /* COLOR BASE PARA QUE EL CONTORNO EXISTA */
-  color: #b8860b;
-
-  /* EFECTO DORADO */
   background: linear-gradient(
     90deg,
     #b8860b,
@@ -1015,22 +1008,21 @@ button, a, h1, h2, h3, p {
     #fff8dc,
     #ffd700,
     #b8860b
-  );
-  background-size: 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
+  ) !important;
 
-  /* ⚠️ CLAVE: NO TRANSPARENTE TOTAL */
-  -webkit-text-fill-color: unset;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
 
-  /* 🖤 CONTORNO OSCURO FINO Y VISIBLE */
+  /* 🔥 CLAVE ABSOLUTA */
+  -webkit-text-fill-color: unset !important;
+
+  /* 🖤 CONTORNO OSCURO */
   text-shadow:
     -1px -1px 0 rgba(0,0,0,0.9),
      1px -1px 0 rgba(0,0,0,0.9),
     -1px  1px 0 rgba(0,0,0,0.9),
      1px  1px 0 rgba(0,0,0,0.9);
-
-  animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
 
 
