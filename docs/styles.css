@@ -995,7 +995,7 @@ button, a, h1, h2, h3, p {
 }
 
 /* =============================== */
-/* TITULO CON DORADO DE ESTRELLAS ✨ */
+/* TITULO DORADO ESTRELLA + CONTORNO 🖤 */
 /* =============================== */
 
 .titulo-principal {
@@ -1004,18 +1004,36 @@ button, a, h1, h2, h3, p {
   letter-spacing: 3px;
   text-align: center;
 
-  /* 🟡 DORADO IGUAL AL DE LAS ESTRELLITAS */
-  color: #f5c542; /* dorado cálido tipo emoji ✨ */
+  /* COLOR BASE (emoji ✨ gold) */
+  color: #f5c542;
+
+  /* DORADO TIPO ESTRELLITA ✨ */
+  background: linear-gradient(
+    90deg,
+    #e0a800,
+    #f5c542,
+    #fff1a8,
+    #f5c542,
+    #e0a800
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* NO TRANSPARENTE (CLAVE) */
+  -webkit-text-fill-color: unset;
 
   /* CONTORNO OSCURO FINO */
   text-shadow:
-    -1px -1px 0 rgba(0,0,0,0.9),
-     1px -1px 0 rgba(0,0,0,0.9),
-    -1px  1px 0 rgba(0,0,0,0.9),
-     1px  1px 0 rgba(0,0,0,0.9);
+    -1px -1px 0 rgba(0,0,0,0.85),
+     1px -1px 0 rgba(0,0,0,0.85),
+    -1px  1px 0 rgba(0,0,0,0.85),
+     1px  1px 0 rgba(0,0,0,0.85);
 
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
+
 
 
 
