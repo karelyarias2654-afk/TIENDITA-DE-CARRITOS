@@ -995,30 +995,18 @@ button, a, h1, h2, h3, p {
 }
 
 /* =============================== */
-/* CONTORNO SUPER EXTRA FINO 💎 */
+/* CONTORNO OSCURO ULTRA FINO 🖤 */
 /* =============================== */
 
 .titulo-principal {
   text-shadow:
-    -0.2px -0.2px 0 rgba(90, 55, 15, 0.65),
-     0.2px -0.2px 0 rgba(90, 55, 15, 0.65),
-    -0.2px  0.2px 0 rgba(90, 55, 15, 0.65),
-     0.2px  0.2px 0 rgba(90, 55, 15, 0.65);
+    -0.15px -0.15px 0 rgba(0,0,0,0.55),
+     0.15px -0.15px 0 rgba(0,0,0,0.55),
+    -0.15px  0.15px 0 rgba(0,0,0,0.55),
+     0.15px  0.15px 0 rgba(0,0,0,0.55);
 }
 
-/* =============================== */
-/* ESTRELLITAS SUPER FINAS ✨ */
-/* =============================== */
-
-.titulo-principal span,
-.titulo-principal::before,
-.titulo-principal::after {
-  text-shadow:
-    -0.2px -0.2px 0 rgba(90, 55, 15, 0.65),
-     0.2px -0.2px 0 rgba(90, 55, 15, 0.65),
-    -0.2px  0.2px 0 rgba(90, 55, 15, 0.65),
-     0.2px  0.2px 0 rgba(90, 55, 15, 0.65);
+/* ✨ ESTRELLITAS CON EL MISMO CONTORNO FINO */
+.titulo-principal {
+  filter: drop-shadow(0 0 0.25px rgba(0,0,0,0.5));
 }
-
-
-
