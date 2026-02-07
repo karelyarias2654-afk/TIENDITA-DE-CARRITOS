@@ -1021,8 +1021,8 @@ background: linear-gradient(
   -webkit-background-clip: text;
   background-clip: text;
 
-  /* ⚠️ CLAVE: NO TRANSPARENTE TOTAL */
-  -webkit-text-fill-color: unset;
+  /* ✅ ESTA ES LA CLAVE */
+  -webkit-text-fill-color: transparent;
 
   /* 🖤 CONTORNO OSCURO FINO Y VISIBLE */
   text-shadow:
@@ -1033,6 +1033,7 @@ background: linear-gradient(
 
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
 
 
 
