@@ -14,6 +14,10 @@ body {
 /*              TEXTOS GENERALES              */
 /* ========================================= */
 
+h1 {
+    color: #d32f2f; /* Rojo */
+}
+
 h2 {
     color: #1976d2; /* Azul */
 }
@@ -602,6 +606,24 @@ button, a, h1, h2, h3, p {
   margin-bottom: 20px;
   text-align: center;
 
+  /* DORADO REAL (no amarillo) */
+  background: linear-gradient(
+    90deg,
+    #b8860b,
+    #ffd700,
+    #fff8dc,
+    #ffd700,
+    #b8860b
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.6),
+    0 0 15px rgba(255, 215, 0, 0.4);
+}
+
 @keyframes doradoBrillo {
   0% { background-position: 0%; }
   100% { background-position: 300%; }
@@ -973,8 +995,7 @@ button, a, h1, h2, h3, p {
 }
 
 /* =============================== */
-/* TITULO AZUL + ESTRELLAS DORADAS */
-/* CONTORNO NEGRO FINO ✨🖤 */
+/* TITULO DORADO + CONTORNO REAL 🖤 */
 /* =============================== */
 
 .titulo-principal {
@@ -983,7 +1004,26 @@ button, a, h1, h2, h3, p {
   letter-spacing: 3px;
   text-align: center;
 
-  /* 🖤 CONTORNO NEGRO FINO (NO CAMBIAR) */
+  /* COLOR BASE PARA QUE EL CONTORNO EXISTA */
+  color: #b8860b;
+
+  /* EFECTO DORADO */
+  background: linear-gradient(
+    90deg,
+    #b8860b,
+    #ffd700,
+    #fff8dc,
+    #ffd700,
+    #b8860b
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* ⚠️ CLAVE: NO TRANSPARENTE TOTAL */
+  -webkit-text-fill-color: unset;
+
+  /* 🖤 CONTORNO OSCURO FINO Y VISIBLE */
   text-shadow:
     -1px -1px 0 rgba(0,0,0,0.9),
      1px -1px 0 rgba(0,0,0,0.9),
@@ -991,16 +1031,6 @@ button, a, h1, h2, h3, p {
      1px  1px 0 rgba(0,0,0,0.9);
 
   animation: latidoPrincipal 3s ease-in-out infinite;
-}
-
-/* 🔵 COLOR AZUL SOLO PARA LAS LETRAS */
-.texto-titulo {
-  color: #1565c0; /* azul elegante */
-}
-
-/* ✨ COLOR DORADO SOLO PARA LAS ESTRELLITAS */
-.estrella {
-  color: #d4af37; /* dorado fino */
 }
 
 
