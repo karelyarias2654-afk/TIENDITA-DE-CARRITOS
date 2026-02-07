@@ -1008,14 +1008,15 @@ button, a, h1, h2, h3, p {
   color: #b8860b;
 
   /* EFECTO DORADO */
-  background: linear-gradient(
-    90deg,
-    #b8860b,
-    #ffd700,
-    #fff8dc,
-    #ffd700,
-    #b8860b
-  );
+background: linear-gradient(
+  90deg,
+  #d4af37,
+  #f5d76e,
+  #fff2b2,
+  #f5d76e,
+  #d4af37
+);
+
   background-size: 300%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1032,5 +1033,6 @@ button, a, h1, h2, h3, p {
 
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
 
 
