@@ -14,10 +14,6 @@ body {
 /*              TEXTOS GENERALES              */
 /* ========================================= */
 
-h1 {
-    color: #d32f2f; /* Rojo */
-}
-
 h2 {
     color: #1976d2; /* Azul */
 }
@@ -606,24 +602,6 @@ button, a, h1, h2, h3, p {
   margin-bottom: 20px;
   text-align: center;
 
-  /* DORADO REAL (no amarillo) */
-  background: linear-gradient(
-    90deg,
-    #b8860b,
-    #ffd700,
-    #fff8dc,
-    #ffd700,
-    #b8860b
-  );
-  background-size: 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  text-shadow:
-    0 0 8px rgba(255, 215, 0, 0.6),
-    0 0 15px rgba(255, 215, 0, 0.4);
-}
-
 @keyframes doradoBrillo {
   0% { background-position: 0%; }
   100% { background-position: 300%; }
@@ -1024,4 +1002,5 @@ button, a, h1, h2, h3, p {
 .estrella {
   color: #d4af37; /* dorado fino */
 }
+
 
