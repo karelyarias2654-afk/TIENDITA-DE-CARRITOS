@@ -995,7 +995,7 @@ button, a, h1, h2, h3, p {
 }
 
 /* =============================== */
-/* TITULO DORADO + CONTORNO REAL 🖤 */
+/* TITULO AZUL + CONTORNO NEGRO 🖤 */
 /* =============================== */
 
 .titulo-principal {
@@ -1004,26 +1004,10 @@ button, a, h1, h2, h3, p {
   letter-spacing: 3px;
   text-align: center;
 
-  /* COLOR BASE PARA QUE EL CONTORNO EXISTA */
-  color: #b8860b;
+  /* 🔵 AZUL SOLO LAS LETRAS */
+  color: #1565c0;
 
-  /* EFECTO DORADO */
-  background: linear-gradient(
-    90deg,
-    #b8860b,
-    #ffd700,
-    #fff8dc,
-    #ffd700,
-    #b8860b
-  );
-  background-size: 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* ⚠️ CLAVE: NO TRANSPARENTE TOTAL */
-  -webkit-text-fill-color: unset;
-
-  /* 🖤 CONTORNO OSCURO FINO Y VISIBLE */
+  /* 🖤 CONTORNO NEGRO FINO */
   text-shadow:
     -1px -1px 0 rgba(0,0,0,0.9),
      1px -1px 0 rgba(0,0,0,0.9),
@@ -1032,5 +1016,7 @@ button, a, h1, h2, h3, p {
 
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
+
 
 
