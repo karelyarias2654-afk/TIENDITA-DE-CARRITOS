@@ -1007,14 +1007,14 @@ button, a, h1, h2, h3, p {
   /* COLOR BASE PARA QUE EL CONTORNO EXISTA */
   color: #b8860b;
 
-  /* EFECTO DORADO */
+  /* EFECTO AZUL */
 background: linear-gradient(
   90deg,
-  #d4af37,
-  #f5d76e,
-  #fff2b2,
-  #f5d76e,
-  #d4af37
+  #0d47a1,
+  #1976d2,
+  #bbdefb,
+  #1976d2,
+  #0d47a1
 );
 
   background-size: 300%;
@@ -1033,6 +1033,7 @@ background: linear-gradient(
 
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
 
 
 
