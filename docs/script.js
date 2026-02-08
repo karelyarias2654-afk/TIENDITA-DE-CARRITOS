@@ -8,6 +8,10 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, index) => {
     if (entry.isIntersecting) {
 
+      if (entry.target.classList.contains('anim-card')) {
+        entry.target.style.transitionDelay = `${index * 0.15}s`;
+      }
+
       entry.target.classList.add('show');
       observer.unobserve(entry.target);
     }
@@ -63,4 +67,3 @@ window.addEventListener("DOMContentLoaded", () => {
     audio.play();
   });
 });
-
