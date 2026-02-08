@@ -1005,7 +1005,7 @@ button, a, h1, h2, h3, p {
   text-align: center;
 
   /* COLOR BASE PARA QUE EL CONTORNO EXISTA */
-  color: #b8860b;
+  color: #c62828; /* rojo elegante */
 
   /* EFECTO DORADO */
   background: linear-gradient(
@@ -1032,5 +1032,6 @@ button, a, h1, h2, h3, p {
 
   animation: latidoPrincipal 3s ease-in-out infinite;
 }
+
 
 
